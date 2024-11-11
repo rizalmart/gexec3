@@ -1,5 +1,6 @@
 gExec: ChangeLog
 ------------------------------------------------------------------------------
+* Ported to GTK+3 by rizalmart
 
 [0.4] <%%EMAIL> ( %%DATE )
 * Applied patch by Corey Wringt. prog_ renamed to cmd_ in config writing. Fixes debian bug #413614.
