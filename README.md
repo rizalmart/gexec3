@@ -14,7 +14,7 @@ buttons for specifying how the command should be run. (I.e. in a terminal).
 	
 It features (normal, understandable, working) tab-completion, history list
 and options for running commands in a terminal emulator and/or the root 
-user (via gksu).
+user (via sudo -A).
 
 gExec was created because I mainly use GTK programs, but I do not run
 Gnome (or at least not the panel). Instead I use WindowMaker. WindowMaker
@@ -33,12 +33,12 @@ Installation
 
 In order to compile gExec, you will need:
 
-*   Gtk 2.0+ development headers
+*   Gtk 3.0+ development headers
 *   Glib 2.0+ development headers
 
 In order to run gExec, you will need:
 
-*   Gtk 2.0+ dynamically loadable libraries.
+*   Gtk 3.0+ dynamically loadable libraries.
 
 
 ### Compiling
@@ -78,13 +78,13 @@ Configuration
 
 gExec has a few configuration options which are stored in the file
 
-    $HOME/.gexec
+    $XDG_CONFIG_HOME/gexec/gexec-settings.cfg
 
 This file will automically be created if not present the first time
 gExec is run. It can contain three options:
 
 	cmd_termemu=STRING   (default:  xterm -e %s  )
-	cmd_su=STRING        (default:  gksu "%s"  )
+	cmd_su=STRING        (default:  sudo -A "%s"  )
 	history_max=INT      (default:  20  )
 
 These options should be self-evident. Including a %s in the command
@@ -103,7 +103,7 @@ Feedback / Contributing
 Questions? Problems? Ideas? Visit this gExec's project page, where you can
 submit bugs/feature requests/questions, at:
 
-https://github.com/fboender/gexec
+https://github.com/rizalmart/gexec3
 	
 ### Known bugs
 
